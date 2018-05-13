@@ -8,14 +8,6 @@
     <bean id="sadFortune" class="iocANDcdiXMLbased.classes.SadFortune"/>
     <bean id="randomFortune" class="iocANDcdiXMLbased.classes.RandomFortuneService"/>
 
-    <!--contructor based injection-->
-    <bean id="bbCoach" class="iocANDcdiXMLbased.classes.BaseballCoach">
-        <constructor-arg ref="happyFortune"/>
-    </bean>
-
-    <!--setter based injection-->
-    <bean id="fbCoach" class="iocANDcdiXMLbased.classes.FootballCoach">
-        <property name="fortuneService" ref="randomFortune"/>
-        <property name="injectedVal" value="ContextInjectedVal"/>
-    </bean>
+    <bean id="singleton" class="iocANDcdiXMLbased.classes.Singleton" scope="singleton"/>
+    <bean id="prototype" class="iocANDcdiXMLbased.classes.Prototype" scope="prototype" />
 </beans>

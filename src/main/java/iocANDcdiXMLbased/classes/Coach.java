@@ -1,4 +1,4 @@
-package ioc;
+package iocANDcdiXMLbased.classes;
 
 public interface Coach {
 
